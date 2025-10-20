@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-app-deployment
+  labels:
+    app: spring-boot-app
+spec:
+  replicas: 3 # Chạy 3 bản sao của ứng dụng
+  selector:
+    matchLabels:
+      app: spring-boot-app
+  template:
+    metadata:
+      labels:
+        app: spring-boot-app
+    spec:
+      containers:
+        - name: spring-boot-container
+          # Thay thế bằng tên image bạn đã build và đẩy lên Docker Registry
+          image: danny078/spring-boot-k8s:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          # Cấu hình Health Checks (Quan trọng cho Spring Boot Actuator)
+          # BẠN CẦN THÊM DEPENDENCY 'spring-boot-starter-actuator' VÀO pom.xml
+          # và cấu hình để lộ các endpoint health
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: 8080
+            initialDelaySeconds: 30 # Đợi 30s sau khi khởi động mới kiểm tra
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: 8080
+            initialDelaySeconds: 15 # Đợi 15s sau khi khởi động mới kiểm tra
+            periodSeconds: 5
+          resources:
+            limits:
+              memory: "512Mi" # Giới hạn bộ nhớ, Java cần nhiều bộ nhớ hơn các ngôn ngữ khác
+              cpu: "500m" # Giới hạn CPU

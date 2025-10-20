@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-app-service
+spec:
+  # Chọn các Pod có label 'app: spring-boot-app'
+  selector:
+    app: spring-boot-app
+  ports:
+    - protocol: TCP
+      port: 80 # Cổng Service (người dùng truy cập)
+      targetPort: 8080 # Cổng ứng dụng Spring Boot (bên trong container)
+  type: LoadBalancer # Hoặc NodePort nếu bạn triển khai trên K8s local (Minikube)
