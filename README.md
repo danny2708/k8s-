@@ -1,20 +1,18 @@
 # Bài 27/10 ci/cd:
 ## Link repo manifests: https://github.com/danny2708/k8s-manifests
 
-## Cấu hình ci:
+# Cấu hình ci:
 
 <img width="943" height="809" alt="image" src="https://github.com/user-attachments/assets/51b92459-8c5a-4c02-b2a6-a802dbea4735" />
 
 <img width="1827" height="1318" alt="image" src="https://github.com/user-attachments/assets/535f0342-1729-455d-8c22-fc88c93e4d36" />
 
-<img width="1919" height="863" alt="image" src="https://github.com/user-attachments/assets/1a0c8781-99c2-463e-8338-ca7607cda10e" />
-
-
-
-## Cấu hình argocd: 
+# Cấu hình argocd: 
 <img width="944" height="531" alt="image" src="https://github.com/user-attachments/assets/515da58a-ae46-4994-b262-19de457fdd50" />
 
-## App chạy:
+<img width="1919" height="863" alt="image" src="https://github.com/user-attachments/assets/1a0c8781-99c2-463e-8338-ca7607cda10e" />
+
+# App chạy:
 <img width="944" height="531" alt="image" src="https://github.com/user-attachments/assets/c08a0183-4278-4a80-b511-519d29bad9e5" />
 
 
