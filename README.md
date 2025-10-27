@@ -14,10 +14,8 @@
 ## Cấu hình argocd: 
 <img width="944" height="531" alt="image" src="https://github.com/user-attachments/assets/515da58a-ae46-4994-b262-19de457fdd50" />
 
-<img width="944" height="531" alt="image" src="https://github.com/user-attachments/assets/c08a0183-4278-4a80-b511-519d29bad9e5" />
-
 ## App chạy:
-
+<img width="944" height="531" alt="image" src="https://github.com/user-attachments/assets/c08a0183-4278-4a80-b511-519d29bad9e5" />
 
 
 # Bài k8s 20/10
